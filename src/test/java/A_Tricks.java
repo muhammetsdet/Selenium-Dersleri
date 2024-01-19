@@ -1,2 +1,115 @@
-package PACKAGE_NAME;public class A_Tricks {
+public class A_Tricks {
+    /*
+    --> Selenium automates browsers. That's it! (Borwserlarımızı otomasyonla yönetmemizi sağlayan bir kütüphanedir.
+   -->Method parantezleri olabildiğince kısa ve anlaşılabilir olur.
+   -->Shift tab geri almak istediğimiz tüm satırları geri alır
+   -->Ctrl + u tuşu sayfanın kaynak kodlarını gösterir
+   -->Test methodları public void'dur ve parametreli olmaz.
+   -->DRY=Don't Repeat Yourself WET=
+   -->Before ve After de ignore olmuyor
+   -->Maven bir Java derleme ve yönetim aracıdır.
+   -->JUnit açık kaynaklı bir birim test aracıdır ve küçük/büyük kod birimlerini test etmek için kullanılır
+   -->assertTrue static olduğu için import edilebilir.
+   -->Assert.* ifadesi Assert clasındaki tüm methodları import eder.
+   -->Assert equals sadece değerleri karşılaştırır ancak assertSame referanslarıda karşılaştırır. new ile oluşturulan obje farklı referans değeri alan string olur.
+   -->new keyword'ü ile String Pool dışında yeni bir obje ile yeni bir referans elde ettik.
+   -->Placeholder :::> Kullanıcıya yol göstermek için iç kısımlara yazılan yerler. e mail kutusunun içinde e posta yazarak yol gösteren yazılardır.
+   -->Absolute xPath'de hiyararşiyi takip ederek locate eidyoruz relative XPath'de istediğimiz tagden başlayabilir.
+   -->Text'in atribute'u olmaz
+   -->Bir web elementi class name ile bulmak isteidğimizde atribute boşluk içerebileceği için çok tercih edilmez.
+   -->Webdriver'daki tagname locator'ı div etiketi  a etketi vb. etiket adlarına sahip ögeleri tanımlamak için kullanılır. Çoğunlukla
+   Webelementin bir listesini almak için kullanılır. Bu nedenle findelements() ile kullanılması önerilir.
+   -->Link Text içeriği casesensitive'dir
+   -->XPath kısaca xml yolu olarak tanımlanır. Web sayfasındaki herhangi bir ögeyi bulmak için syntax veya dil diye biliriz.
+   -->İki tür xPath vardır 1-->Absolute 2-->Relative. Absolute XPath'ın dezavantajı öğenin yolunda herhangi bir değişiklik yapılması durumunda xPath'ın başarısız olmasıdr.
+   -->xPath eksenleri daha çok id,name,class olmadığında tercih edilir.
+   -->Dropdown üzerinde işlem yapabilmek için select objesi oluşturmamız gerekir.
+   -->İmplicitWait noSuchElementException olduğu zaman işe yarar eğer eleman varas explicitWait daha mantıklı
+   -->Oluşturulan Wait objesi bir interface'dir
+   -->Set'in içinde index yok ancak Listte index var
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+   -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+    -->
+
+
+
+     */
 }
