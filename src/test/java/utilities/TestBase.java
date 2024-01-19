@@ -39,7 +39,7 @@ public abstract class TestBase {
     @After
     public void tearDown() throws InterruptedException {
         Thread.sleep(3000);
-        driver.quit();
+        //driver.quit();
     }
 
 
