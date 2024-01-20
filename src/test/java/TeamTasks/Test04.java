@@ -3,10 +3,9 @@ package TeamTasks;
 import org.junit.Test;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
-import org.openqa.selenium.WebElement;
 import utilities.TestBase;
 
-import static org.junit.Assert.assertEquals;
+
 
 public class Test04 extends TestBase {
     @Test

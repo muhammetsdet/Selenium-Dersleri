@@ -10,7 +10,7 @@ import utilities.TestBase;
 
 import java.util.List;
 
-
+import static org.junit.Assert.assertTrue;
 
 
 public class Task11 extends TestBase {
@@ -34,14 +34,15 @@ todos.sendKeys("Prepare breakfast, Wash the dishes, Take care of baby, Help your
             actions.moveToElement(todoList).click().perform();
         }
 
-//driver.findElement(By.xpath("(//li[contains(@id, '')])[4]")).click();
-
-
         //Delete all todos.
-
+        for (int i = 0; i <4 ; i++) {
+            driver.findElement(By.xpath("(//i[@class='fa fa-trash'])[1]")).click();
+            Thread.sleep(2000);
+        }
 
 //        Assert that all todos deleted.
-
+       List<WebElement> deletedList = container.findElements(By.tagName("li"));
+        assertTrue(deletedList.isEmpty());
 
     }
 

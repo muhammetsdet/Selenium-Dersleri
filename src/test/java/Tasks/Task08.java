@@ -37,4 +37,16 @@ box3.click();
 		for (WebElement w:checkboxes) {assertTrue(w.isSelected());}
 
     }
+
+
+        @Test
+    public void test01(){
+        driver.get("https://app.endtest.io/guides/docs/how-to-test-checkboxes/");
+        List<WebElement> checkboxes =driver.findElements(By.cssSelector("input[type='checkbox']"));
+        for (WebElement w:checkboxes) {
+            if(!w.isSelected())
+                w.click();
+        }
+        Assert.assertTrue(checkboxes.stream().allMatch(WebElement::isSelected));
+    }
  */
