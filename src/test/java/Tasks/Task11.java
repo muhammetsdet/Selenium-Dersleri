@@ -27,8 +27,8 @@ todos.sendKeys("Prepare breakfast, Wash the dishes, Take care of baby, Help your
         todos.sendKeys(Keys.ENTER);
 
        // Strikethrough all todos.(Üzerlerini çiziniz)
-        WebElement container = driver.findElement(By.id("container"));
-        List<WebElement> todosElement = container.findElements(By.tagName("li"));
+       // WebElement container = driver.findElement(By.id("container"));
+        List<WebElement> todosElement = driver.findElements(By.tagName("li"));
         for (WebElement todoList : todosElement) {
             System.out.println("Todo List: " + todoList.getText());
             actions.moveToElement(todoList).click().perform();
@@ -36,14 +36,40 @@ todos.sendKeys("Prepare breakfast, Wash the dishes, Take care of baby, Help your
 
         //Delete all todos.
         for (int i = 0; i <4 ; i++) {
-            driver.findElement(By.xpath("(//i[@class='fa fa-trash'])[1]")).click();
-            Thread.sleep(2000);
+            driver.findElement(By.xpath("//i[@class='fa fa-trash']")).click();
+            Thread.sleep(1000);
         }
 
 //        Assert that all todos deleted.
-       List<WebElement> deletedList = container.findElements(By.tagName("li"));
+       List<WebElement> deletedList = driver.findElements(By.tagName("li"));
         assertTrue(deletedList.isEmpty());
 
     }
 
 }
+/*
+  @Test
+        public void test01() throws InterruptedException {
+            driver.get("http://webdriveruniversity.com/To-Do-List/index.html");
+            ArrayList<String> todoList= new ArrayList<>(Arrays.asList("Prepare breakfast"," Wash the dishes", "Take care of baby", "Help your kid's homework", "Study Selenium", "Sleep"));
+
+            WebElement todo =driver.findElement(By.xpath("//*[@id='container']/input"));
+            for (String w:todoList) {
+                todo.sendKeys(w, Keys.ENTER);
+            }
+
+            List<WebElement> Strikethrough = driver.findElements(By.tagName("li"));
+            Strikethrough.forEach(WebElement::click);
+
+            List<WebElement> deleteButtons = driver.findElements(By.xpath("//i[@class='fa fa-trash']"));
+            deleteButtons.forEach(WebElement::click);
+            Thread.sleep(1000);
+
+            List<WebElement> assertDeleteButtons = driver.findElements(By.xpath("//i[@class='fa fa-trash']"));
+
+            Assert.assertEquals(0,assertDeleteButtons.size());
+            Assert.assertTrue(assertDeleteButtons.isEmpty());
+
+
+        }
+ */

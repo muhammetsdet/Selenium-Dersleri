@@ -12,7 +12,7 @@ Projenin kalbidir.
 • Maven, büyük projeler üzerinde çalışırken POM (Project Object Model) ile proje oluştururken kullanılabilir.
 • Birden çok IDE (IntelliJ, Eclipse, vs.) ile çalışır.
 • Maven bir Java derleme ve yönetim aracıdır.
-• Maven ile tüm otomasyon süreci sürecini yönetmek için maven projesi oluşturabilirsiniz.
+• Maven ile tüm otomasyon sürecini yönetmek için maven projesi oluşturabilirsiniz.
 • Maven, pom.xml dosyası ile dependency’leri yönetmemize yardımcı oluyor.
 • Maven, Java uygulamalarını derlememize, çalıştırmamıza ve dağıtmamıza yardımcı oluyor.
 • Ant ve Gradle gibi başka araçlar da var ancak Maven en popüler olanıdır.
@@ -20,7 +20,6 @@ Projenin kalbidir.
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver= new ChromeDriver();//Selenium 4.6 öncesi direkt olarak selenium kütüphanesi ile dirver objesi oluşturulamıyordu.
-
         driver.get("https://clarusway.com");
         driver.quit();
     }

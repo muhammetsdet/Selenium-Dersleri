@@ -29,7 +29,7 @@ public class C20_FakerClass {
         System.out.println("faker.internet().emailAddress() = " + faker.internet().emailAddress());
         System.out.println("faker.internet().password(5,9) = " + faker.internet().password());
         System.out.println("faker.date().birthday() = " + faker.date().birthday());
-faker.number().numberBetween(4,7);
+        faker.number().numberBetween(4,7);
         System.out.println("faker.lorem().sentence() = " + faker.lorem().sentence());
         System.out.println("faker.lordOfTheRings().character() = " + faker.lordOfTheRings().character());
     }

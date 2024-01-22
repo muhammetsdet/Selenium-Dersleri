@@ -53,7 +53,7 @@ assertFalse(isContain);
     public void test03UrlTest(){
         //    3- Test if the URL equals to "https://clarusway.com/"
       String actualUrl=  driver.getCurrentUrl();//Actual Result
-        String expectedUrl="https://clarusway.com/";//sondaki / forfard slash olmazsa test geçemez çünkü string karşılaştırıyor aynı olmalı.
+        String expectedUrl="https://clarusway.com/";//sondaki / forward slash olmazsa test geçemez çünkü string karşılaştırıyor aynı olmalı.
         assertEquals(expectedUrl,actualUrl);
 
     }

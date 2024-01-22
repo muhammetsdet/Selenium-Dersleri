@@ -48,8 +48,8 @@ public class C19_RadioButton {
 //        Assert radio button 'radio with id' is selected and radio buton 1 is not selected
        WebElement radio1= driver.findElement(By.xpath("//input[@value='Radio1']"));
 
-        assertTrue(radioWithId.isSelected());//radioWithId'ın seçişi olduğu doğrulandı
-        assertFalse(radio1.isSelected());//radio1'in seçili olmadığı doğrulandı
+        assertTrue(radioWithId.isSelected());//radioWithId'ın seçili olduğu doğrulandı
+        assertFalse(radio1.isSelected());//radio1'in seçilmediği doğrulandı
 
 
     }
