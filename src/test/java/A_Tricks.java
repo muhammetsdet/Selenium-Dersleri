@@ -37,7 +37,7 @@ public class A_Tricks {
    -->CTRL + Right or Left → Kelimeler arası hızlıca dolaşırsınız
 *** -->//input[@type='text' or @name='email'] --- //input[@type='text' and @name='email'] --- //input[contains(@type,'text')]
    Text:
-    //tagname[.='text name’]
+    //tagname[.='text name’]  *** //span[.='Double click the block']
     //*[contains(text(),'piece of text’)]
     //*[text( )= 'text name’]
     //*[.='text name’]

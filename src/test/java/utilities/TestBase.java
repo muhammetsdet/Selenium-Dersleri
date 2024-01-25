@@ -1,10 +1,16 @@
 package utilities;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.Duration;
 
 public abstract class TestBase {
@@ -41,6 +47,13 @@ public abstract class TestBase {
         Thread.sleep(3000);
         //driver.quit();
     }
+    public static Cell getCellValue(String sheetName,int rowIndex,int cellIndex) throws IOException {
+        FileInputStream fileInputStream = new FileInputStream(System.getProperty("user.dir") + "\\resources\\Capitals.xlsx");
 
+        Workbook workbook = WorkbookFactory.create(fileInputStream);
+
+        return workbook.getSheet(sheetName).getRow(rowIndex).getCell(cellIndex);
+
+    }
 
 }

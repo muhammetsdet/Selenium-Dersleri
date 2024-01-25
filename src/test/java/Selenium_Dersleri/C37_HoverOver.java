@@ -23,6 +23,7 @@ public class C37_HoverOver extends TestBase {
         //Hover over on “Products” link.
         WebElement products = driver.findElement(By.id("products-dd-toggle"));
         Actions actions = new Actions(driver);
+        driver.findElement(By.id("accept-cookie-notification")).click();
         actions.moveToElement(products).perform();//moveToElement() metodu mouse'u web elementi üzerine getirir
 
         //Click on "Automate".

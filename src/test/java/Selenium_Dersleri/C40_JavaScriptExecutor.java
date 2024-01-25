@@ -40,7 +40,7 @@ public class C40_JavaScriptExecutor extends TestBase {
 
         //Scroll Up
         driver.switchTo().defaultContent();//Tüm sayfada işlem yapmak için--> driver iç framde kalmamalı
-        js.executeScript("window.scrollTo(0,0)");//En yukarı kaydır
+        js.executeScript("window.scrollTo(0,0)");//En yukarı kaydır. İçinde bulunduğu en üst kısma gitti
 
         //Scroll Down
         Thread.sleep(3000);
