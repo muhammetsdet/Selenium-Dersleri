@@ -43,11 +43,12 @@ public class A_Tricks {
     //*[.='text name’]
    -->Faker.instance() static methodu ile obje oluşturmadan data üretilebilir.
    -->Robot class selenium haricidir direk bilgisayar mousunu kullanır.
-   -->
-   -->
-   -->
-   -->
-   -->
+   -->tabel//tbody//tr tbody içindeki tüm satırları yazdırır ancak tabel//tr yaparsak başlığıda dahil eder etmemesi için sadece body içindekini alırız.
+   -->findelement içerisine yolu yanlış yazarsa exception fırlatır ancak findelements ise exception atmaz boş liste döndürür.
+   -->//tbody/tr[1] böyle bir yazımda üsteki bir table'ın 1. satırını verir ancak //tbody/tr[2] bu ifade başka tek satırlık table'ı geçiş alttaki tablonun 1. satırını değill belirtilen 2. satırırnı verir
+   çünkü üstte 2. satır olmadığı için lokasyon alttaki 2. satıra gider.
+   -->webTable.findElement(By.xpath(".//tbody/tr[3]")); bu ifadedeki .//tbody/tr[3] kısmının noktası bu ilementten sonra devam et demektir. ve biz . (nokta) koymazsak elementten devam etmez baştaki ifadeye göre alır.
+   -->Hiç bir ayarlama yapmazsak log4j fatal ve errror'u yazdırır.
    -->
    -->
    -->

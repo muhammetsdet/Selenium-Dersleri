@@ -1,17 +1,24 @@
 package utilities;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.junit.After;
 import org.junit.Before;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
 public abstract class TestBase {
     /*
@@ -53,6 +60,38 @@ public abstract class TestBase {
         Workbook workbook = WorkbookFactory.create(fileInputStream);
 
         return workbook.getSheet(sheetName).getRow(rowIndex).getCell(cellIndex);
+
+    }
+
+    public void getFullPageScreenShot(){
+        //1. Adım: Type Casting
+        TakesScreenshot ts = (TakesScreenshot) driver;
+
+        //2. Adım: getScreenshotAs() methodu
+        File ss = ts.getScreenshotAs(OutputType.FILE);
+
+        // 3. Adım: Alınan screenshot dosyasını bir hedefe kopyala
+        String now = new SimpleDateFormat("yyMMddhhmmss").format(new Date()) + System.nanoTime();
+        try {
+            FileUtils.copyFile(ss, new File(".\\test_output\\screenshots\\FullScreenShoots" + now + ".png"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public void getSpecificElementsScreenShot(WebElement element){
+
+        //1. Adım: Locate edilen web element ile getScreenshotAs() metodunu kullan
+        File ss = element.getScreenshotAs(OutputType.FILE);
+
+        //2. Adım: Screenshot'ı ilgili yere kopyala
+        String now = new SimpleDateFormat("yyMMddhhmmss").format(new Date())+System.nanoTime();
+        try {
+            FileUtils.copyFile(ss, new File(".\\test-output\\screenshots\\specificElementScreenShot"+now+".png") );
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
